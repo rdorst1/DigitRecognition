@@ -16,4 +16,5 @@ py -m pip install imageio numpy keras matplotlib tensorflow
 
 
 To train the models run the models Model1.py, Model2.py and Model3.py. Or use the pretrained models included in this repository.
-To recognize a digit run the test.py file.
+
+To recognize a digit run the test.py file. In that file you can change which number you want to try to recognize.
