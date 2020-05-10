@@ -1,6 +1,5 @@
 import imageio
 import numpy as np
-import matplotlib.pyplot as plt
 from keras.models import load_model
 model = load_model("test_model1.h5")
 model2 = load_model("test_model2.h5")
@@ -27,7 +26,7 @@ alt8 = imageio.imread('../DigitRecognition/Digits/alt8.png')
 alt9 = imageio.imread('../DigitRecognition/Digits/alt9.png')
 niek9 = imageio.imread('../DigitRecognition/Digits/niek9.png')
 
-gray = np.dot(niek9[...,:3], [ 0.299, 0.587, 0.114])
+gray = np.dot(im2[...,:3], [ 0.299, 0.587, 0.114])
 gray = gray.reshape(1, 28, 28, 1)
 
 gray /= 255
@@ -40,20 +39,3 @@ print("Prediction model 2: ", prediction2.argmax())
 
 prediction3 = model3.predict(gray)
 print("Prediction model 3: ", prediction3.argmax())
-
-# i = 0
-# while i <= 1000:
-#     gray = np.dot(niek9[...,:3], [ 0.299, 0.587, 0.114])
-#     gray = gray.reshape(1, 28, 28, 1)
-
-#     gray /= 255
-
-#     prediction = model.predict(gray)
-#     print(i, ": Prediction model 1: ", prediction.argmax())
-
-#     prediction2 = model2.predict(gray)
-#     print(i, ": Prediction model 2: ", prediction2.argmax())
-
-#     prediction3 = model3.predict(gray)
-#     print(i, ": Prediction model 3: ", prediction3.argmax())
-#     i += 1
