@@ -4,11 +4,11 @@ To try out the number recognition you have to use several commands for it to wor
 
 First of all you have to setup a virtual environment:
 
-## py -m venv env
+#### py -m venv env
 
 To make sure you are using the latest version of pip:
 
-### py -m pip install --upgrade pip
+#### py -m pip install --upgrade pip
 
 After this you'll have to install several packages(which may take some time)
 
